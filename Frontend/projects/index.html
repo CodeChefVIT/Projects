@@ -482,7 +482,7 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
         </div>
 </section>
 
-
+<div id="test">dsadasd</div>
 
 
 
@@ -501,8 +501,8 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
 
 <!-- footer -->
 
-
-<script type="text/javascript" src="js/index.js"></script>
+<!-- 
+<script type="text/javascript" src="js/index.js"></script> -->
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -512,10 +512,56 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--  -->
+<!-- <script src="index.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script type="text/javascript">
 
+
+//	$.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+//	 for(var i = 0; i<data.result.length; i++) {
+//	  var node =`<div class="d-flex justify-content-center"> <h1 >"${data.result[i].title}"</h1></div>`
+//	 
+//	  $('#a13').append(node);
+//	}
+	
+//	})                                                                                                                                    .    
+	
+	
+	//   }
+	//   else {
+	//     const errorMessage = document.createElement('marquee')
+	//     errorMessage.textContent = `Gah, it's not working!`
+	//     app.appendChild(errorMessage)
+	//   }
+	// }
+	
+	// request.send()
+//	$.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+//	  console.log(data)
+	
+	  
+//	  for(var i = 0; i<data.result.length; i++) {
+//		var node = `<div id="adit" class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+//										<img src="${data.result[i].photo}" class="img-fluid  mx-auto d-block" alt="img1" style="border-radius:10%;height: 150px; width: 150px;">
+//							</div>`;
+//		  console.log(node);
+	
+//	 $('#a12').append(node);
+//	  }
+//	})
 
 
 
@@ -610,78 +656,159 @@ hideButtons = function(current){
 	if(current == limit) { btnnext.hide(); btnsubmit.show(); }
 }
 
+//commits
+// $.get('https://projects-cc.herokuapp.com/projects/commits/5f1d22185e97101834a990d4', function(data,status){
+    
+//   for(var i = 0; i<data.result.length; i++) {
+//    var node2 =` <div class="d-flex justify-content-center">${data.result[i].commits}</div>`
+//    console.log(node2);
+//    $('.b1').append(node2);
+//   }
+   
+//   });
+
+
+
+
+
+
+
+
 //API INTEGRATION BACKEND TO FRONTEND 
 
 $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	console.log(data)
-  
-	
-	for(var i = 0; i<data.result.length; i++) {
-	  var node = `<div id="adit" class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-									  <button class="button1"><img src="${data.result[0].photo}" class="img-fluid  mx-auto d-block" alt="img1" style="border-radius:10%;height: 150px; width: 150px;"></button>
-						  </div>`;
-		console.log(node);
-  
-   $('#a12').append(node);
+  console.log(data);
 
-	}
-  })
   
-  $( ".button1" ).click(function()  {
-	// $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	  
-	// 		for(var i = 0; i<data.result.length; i++) {
-			 var node1 =`<div class="d-flex justify-content-center"> <h1 >"babai"</h1></div>`
-			 console.log(node1);
-			 $('#a13').append(node1);
-		 
-		   
-		  }) 
-//TITLE
+  for(var i = 0; i<data.result.length; i++) {
+    var node123456 = `<div id="adit" class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 " style="bgcolor:black;">
+                    <button id="${i}" value=""  style="border-radius:10%;height: 150px; width: 150px; "><img src="${data.result[i].photo}" class="img-fluid  mx-auto d-block" alt="img1" style="border-radius:10%;height: 150px; width: 150px; "></button>
+              </div>`;
+    console.log(node123456);
 
-$.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	  
-	//	for(var i = 0; i<data.result.length; i++) {
-		 var node1 =`<div class="d-flex justify-content-center"> <h1 >"tubai"</h1></div>`
-		 console.log(node1);
-		 $('#a13').append(node1);
-	 
-	   
-	  })
-   
-//DESCRIPTIONS
-$.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	  
-	for(var i = 0; i<data.result.length; i++) {
-	 var node1 =`<div class="d-flex justify-content-center"> <span align="center">"${data.result[i].description}"</span></div>`
-	 console.log(node1);
-	 $('#description').append(node1);
-  }
-   
-  })
-   // Mentors
-  $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	  
-	for(var i = 0; i<data.result.length; i++) {
-	 var node2 =` <div class="d-flex justify-content-center"><b>Mentors: </b>"${data.result[i].mentors}"</div>`
-	 console.log(node2);
-	 $('#Mentors').append(node2);
-  }
-   
-  })
-  
-//commits
-$.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
-	  
-	for(var i = 0; i<data.result.length; i++) {
-	 var node2 =` <div class="d-flex justify-content-center">"${data.result[i].commits}"</div>`
-	 console.log(node2);
-	 $('.b1').append(node2);
-  }
-   
-  })
-  
 
+  
+   $("#test").append(node123456);
+
+  
+  //    $(".button1").click(function()  {
+  //        elementClicked = true;
+  // // $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+  //   if( elementClicked === true ) {
+
+
+  //   console.log("hey");
+  //   alert("The paragraph was clickeddsdas.");}});
+
+}
+$("button").click(function()  {
+alert("The paragraph was clickeddsdas.");
+  alert(this.id);
+  var app=this.id;
+  var idfetch = `<div class="d-flex justify-content-center"> <h1 >${data.result[app].title}</h1></div>`;
+  alert(idfetch);
+	$('#a13').append(idfetch);
+
+     var descriptionfetch =`<div class="d-flex justify-content-center"> <span align="center">${data.result[app].description}</span></div>`;
+   console.log(descriptionfetch);
+
+   $('#description').append(descriptionfetch);
+
+console.log(data.result[app].title);
+
+    var mentorfetch =`<div class="d-flex justify-content-center"><b>Mentors: </b>${data.result[app].mentors}</div>`;
+   console.log(mentorfetch);
+   alert(mentorfetch);
+   $('#Mentors').append(mentorfetch);
+
+ }) });
+
+//    function navtab12(id)  {
+
+
+
+// console.log("hey " + id );
+ 
+
+//    var node41 =`${data.result[0].id}`
+
+//    console.log(node41);
+
+
+// // 
+
+// var idfetch = `<div class="d-flex justify-content-center"> <h1 >${data.result[id].title}</h1></div>`
+//     $('#a13').append(idfetch);
+// console.log(data.result[id].title);
+// alert(idfetch);
+
+
+
+//   };
+
+
+  // $(".button1").click(function()  {
+  // // $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+  //   console.log("hey");
+  //   alert("The paragraph was clicked.");
+
+  //    for(var i = 0; i<data.result.length; i++) {
+  //      var nodeid =`<div class="d-flex justify-content-center"> <h1 >${data.result[0].id}</h1></div>`
+
+  //    console.log("hey i am " + nodeid);
+       
+  //    } })});
+// TITLE
+
+// $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+//     var storedata =  new Array(data.result.title);
+//     console.log('hey' + storedata[5]);
+//    // for(var i = 0;  i<data.result.length; i++) {
+//      var node1 =`<div class="d-flex justify-content-center"> <h1 >${data.result[2].title}</h1></div>`
+
+//      console.log(node1);
+//      $('#a13').append(node1);
+
+//       var node1 =`<div class="d-flex justify-content-center"> <span align="center">"${data.result[1].description}"</span></div>`
+//    console.log(node1);
+
+//    $('#description').append(node1);
+
+
+
+//     var node2 =` <div class="d-flex justify-content-center"><b>Mentors: </b>"${data.result[0].mentors}"</div>`
+//    console.log(node2);
+//    $('#Mentors').append(node2);
+  
+   
+     
+//     });
+
+
+
+//  var node5 =` <div class="d-flex justify-content-center">"${data.result[0].commits}"</div>`
+//    console.log("hey i am node 5" + node5);
+//    $('.b1').append(node2);
+   
+
+
+
+//     $( ".button1" ).click(function()  {
+//       $.get('https://projects-cc.herokuapp.com/projects/all', function(data,status){
+    
+//      for(var i = 0; i<data.result.length; i++) {
+//        var nodeid =`<div class="d-flex justify-content-center"> <h1 >${data.result[0].id}</h1></div>`
+
+//      console.log("hey i am " + nodeid);
+       
+//      } })}); 
+//    $.get('https://projects-cc.herokuapp.com/projects/5f1d22185e97101834a990d4/comments', function(data,status){
+// for(var i = 0; i<data.comments.length; i++) {
+//    var node2 =` <div class="d-flex justify-content-center">${data.comments[i].text}</div>`
+//    console.log(node2);
+//    $('.b').append(node2);
+//   }
+//   })
 
 
 </script>

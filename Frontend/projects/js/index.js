@@ -1,6 +1,5 @@
+alert('hello hey');
 
-
-alert('ey');
 // app.innerHTML = "<b>dwwikdhaidiiwa</b>";
 // app.innerHTML += "<h2>Card Header and Footer</h2>"+
 //         '<div class="card">'+
