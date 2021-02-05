@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
+=======
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
 	<title>
 		Projects cc
 	</title>
@@ -68,7 +73,11 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
 </div>.
 <br><br>
 <div class="box">
+<<<<<<< HEAD
 <form>
+=======
+<form name="contact" action="">
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
   
   <div class="segment">
     <h1>Add a Project </h1>
@@ -76,13 +85,20 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
   </div>
   
   <label>
+<<<<<<< HEAD
     <input type="text" placeholder="Title"class="input1" />
       <label style="margin:0px 20px;">
     <input type="password" placeholder="Team" class="input1" />
+=======
+    <input type="text" placeholder="Title"class="input1" id="title"/>
+      <label style="margin:0px 20px;">
+    <input type="text" placeholder="Team" class="input1"  id="team" />
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
   </label>
   </label>
 <br><br>
    <label >
+<<<<<<< HEAD
     <input type="password" placeholder="Idea By" class="input1" />
     <label style="margin: 0px 20px;">
     <input type="password" placeholder="Mentors"class="input1" />
@@ -91,6 +107,19 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
    <br><br> 
     <label style="padding-right: 20px;">
     <input type="password" placeholder="Start"class="input1" />
+=======
+    <input type="text" placeholder="Idea By" class="input1" id="Idea" />
+    <label style="margin: 0px 20px;">
+    <input type="text" placeholder="Mentors"class="input1"  id="Mentors" />
+  </label>
+  </label>
+   <br><br> 
+    <label >
+      <input type="text" placeholder="Repo" class="input1" id="Repo" />
+  
+    <input type="text" placeholder="Start"class="input1"    id="Start"/>
+    <br><br>
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
   </label>
   <label >
     <input type="date" placeholder="Review 1" class="input1" />
@@ -102,7 +131,11 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
   </label>
   </label>
   <br><br>
+<<<<<<< HEAD
   <button class="red   button1" type="button"><i class="icon ion-md-lock"></i> Add project</button>
+=======
+  <button class="red postclick  button1" name="submit" type="button"><i class="icon ion-md-lock"></i> Add project</button>
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
   
 
 
@@ -150,5 +183,41 @@ color: #FFFFFF" href="#" ><i class="far fa-user-circle" style="font-size: 20px;"
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<<<<<<< HEAD
+=======
+
+<script type="text/javascript">
+  $( ".button1" ).click(function(e)  {
+    var titlep=$('#title').val();
+    var ideaByp=$('#Idea').val();
+    var Teamp=$('#team').val();
+    var Mentorsp=$('#Mentors').val();
+    var Repop =$("#Repo").val();
+    var dataString = $(this).serialize();
+     console.log("hello");
+    
+    $.ajax({
+      method:"POST",
+      url:"https://projects-cc.herokuapp.com/projects/add",
+      dataType:"json",
+      data:{
+        "title" : titlep ,
+        "ideaBy" : ideaByp,
+          "tags":["ML","front"],
+        "mentors" : Mentorsp,
+        "repo":Repop ,
+        "team":Teamp
+      },
+      success: function(data) {
+       console.log(data);
+      }
+      
+    });
+    e.preventDefault();
+  });
+
+</script>
+
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
 </body>
 </html>

@@ -130,9 +130,14 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
           });          
           break;
         case 'clear':
+<<<<<<< HEAD
         
           output_.innerHTML = '';
           this.value = '';
+=======
+                       output_.innerHtml ='';
+              this.value = '';
+>>>>>>> e78f3de4a690039cf739a37e7057c3dab3995ead
           return;
         case 'clock':
           var appendDiv = jQuery($('.clock-container')[0].outerHTML);
