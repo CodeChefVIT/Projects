@@ -3,6 +3,10 @@
 	margin: 0;
 	padding: 0;
 }
+ body, html {
+   background-color: #ebecf0;
+}
+
 
  .nav-tabs1 .nav-item {
   margin-bottom: -1px;
@@ -61,7 +65,13 @@
 	left: 50%;
 	top: 300px;
 	transform: translate(-50%, -50%);
+
+
 }
+
+
+
+
 
 .searchbox{
 	transition: border .2s linear;
@@ -96,7 +106,7 @@
 .line{
 position: relative;
  
-	left:40%;
+
 	top: 600px;
 	transform: translate(-50%, -50%);
 }
@@ -371,6 +381,29 @@ border-radius: 12px;
     }
 }
 
+.carousel-indicators{
+
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+ top: 45%;
+  list-style: none;
+}
+
+
+
+
 .carousel-indicators li {
     display: inline-block;
 
@@ -642,3 +675,30 @@ margin-top: -0.4%;
     .barprogress[data-width="100"] .barprogress_item:nth-child(3) {
       --circle-active-color: #24b35a;
       --circle-active-icon: 1; }
+
+
+.cc-logo{
+  margin-top:0px;margin-left: 20px;width: 100px;
+  height: 30px;
+}
+
+.nav-name{
+  font-weight: bold;
+font-size: 18px;
+margin-left: 20px;
+margin-top:  20px;
+
+color: #FFFFFF;
+}
+
+.anchor-nav{
+  font-weight: bold;
+font-size: 18px;
+margin-right: 30px;
+/* identical to box height */
+color: #FFFFFF;
+}
+
+.nav-image{
+  margin-top: -0.2%; width: 100vw;
+}
